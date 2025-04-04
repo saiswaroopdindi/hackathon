@@ -2,7 +2,7 @@
 
 A modern web application that predicts employee attrition using machine learning. The application features a beautiful, responsive UI built with React and Tailwind CSS, coupled with a FastAPI backend for machine learning predictions.
 
-![Employee Attrition Prediction App](screenshot.png)
+![Employee Attrition Prediction App](image.png)
 
 ## Features
 
