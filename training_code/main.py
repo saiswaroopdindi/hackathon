@@ -4,6 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import classification_report, accuracy_score
 import matplotlib.pyplot as plt
+import pickle
 
 # Step 1: Load data
 df = pd.read_csv("data.csv")
@@ -33,6 +34,10 @@ model.fit(X_train, y_train)
 
 # Step 7: Predict and evaluate
 y_pred = model.predict(X_test)
+with open('model.pkl', 'wb') as f:
+    pickle.dump(model, f)
+with open('X_columns.pkl', 'wb') as f:
+    pickle.dump(X.columns.tolist(), f)
 print("Accuracy Score:", accuracy_score(y_test, y_pred))
 print("\nClassification Report:\n", classification_report(y_test, y_pred))
 
